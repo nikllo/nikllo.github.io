@@ -1,0 +1,109 @@
+css
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #2a2a72;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #2a2a72;
+    color: white;
+}
+
+/* Responsive navigation menu */
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        background-color: #2a2a72;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+/* Scale down the images in the photography section */
+.photo img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Scale down the videos in the timelapse section */
+.timelapse video {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Media container styles */
+.media-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Signature overlay styles */
+.signature {
+  position: absolute;
+  bottom: 10px;
+  right: 200px;
+  max-width: 50px; /* Adjust the size of the signature if necessary */
+  height: auto;
+  pointer-events: none; /* Disable interactions with the overlay */
+}
+
+/* Timelapse signature size */
+.timelapse-signature {
+  max-width: 1000px; /* Adjust the size of the timelapse signature if necessary */
+}
+
+/* Add any additional styles you want here */
